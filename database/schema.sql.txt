@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS transaction_db;
+
+USE transaction_db;
+
+DROP TABLE IF EXISTS transaction_log;
+
+CREATE TABLE transaction_log (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    trx_id VARCHAR(255) NOT NULL UNIQUE,
+    bank_id VARCHAR(50),
+    amount DOUBLE,
+    status VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

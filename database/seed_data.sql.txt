@@ -1,0 +1,8 @@
+INSERT INTO transaction_log (trx_id, bank_id, amount, status, created_at) 
+VALUES ('TRX-20260101-000001', 'BANK_A', 1500.00, 'SUCCESS', NOW());
+
+INSERT INTO transaction_log (trx_id, bank_id, amount, status, created_at) 
+VALUES ('TRX-20260101-000002', 'BANK_B', 500.50, 'SUCCESS', NOW());
+
+INSERT INTO transaction_log (trx_id, bank_id, amount, status, created_at) 
+VALUES ('"TRX-20260101-000003', 'BANK_A', 99.99, 'FAILED', NOW());
